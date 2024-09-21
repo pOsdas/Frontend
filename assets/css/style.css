@@ -1,0 +1,129 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #314040, #282828); /* Градиентный фон */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+}
+
+/* Стили для заголовка и логотипа */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Размер иконки */
+    height: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Кнопки Sign Up и Login */
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: #282828;
+}
+
+.signup {
+    background-color: transparent;
+}
+
+.login {
+    background-color: transparent;
+}
+
+/* Полоса-разделитель */
+.divider {
+    width: 100%;
+    border: none;
+    height: 2px;
+    background-color: white;
+    margin: 20px 0;
+}
+
+/* Текст под полосой */
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.intro h2 {
+    font-size: 28px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .intro h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .intro h2 {
+        font-size: 20px;
+    }
+}
