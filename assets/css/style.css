@@ -1,7 +1,8 @@
 /* Общие стили */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
     background: linear-gradient(to bottom, #314040, #282828); /* Градиентный фон */
     color: white;
     display: flex;
@@ -9,6 +10,10 @@ body {
     align-items: center;
     justify-content: start;
     height: 100vh;
+}
+
+h1, h2 {
+    font-weight: 300; /* Более тонкий стиль */
 }
 
 /* Стили для заголовка и логотипа */
@@ -35,6 +40,13 @@ header {
 .logo h1 {
     font-size: 24px;
     margin: 0;
+}
+
+.separator {
+    width: 95%;
+    height: 1px;
+    background-color: #fff;
+    margin-top: 10px;
 }
 
 /* Кнопки Sign Up и Login */
@@ -82,6 +94,125 @@ nav {
 
 .intro h2 {
     font-size: 28px;
+}
+
+.highlight {
+    color: #a7ba88;
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.box {
+    width: 150px;
+    height: 200px;
+    background-color: #4f4f4f;
+    border-radius: 15px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon-wrapper {
+    width: 90px;
+    height: 90px;
+    background-color: #212121; /* Темнее, чтобы выделить иконку */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto; /* Центрируем и добавляем отступ снизу */
+}
+
+.icon-wrapper img {
+    width: 50px;
+    height: 50px;
+}
+
+.box img {
+    width: 38px;
+    height: 38px;
+}
+
+.box p {
+    color: white;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Заголовок для слайдера */
+.slider-heading-left {
+    justify-content: space-between;
+    text-align: left;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 20px;
+}
+
+/* Слайдер занимает всю ширину страницы */
+.slider {
+    width: 100%; /* Ширина слайдера на 100% экрана */
+    overflow: hidden;
+    margin: 30px 0; /* Отступ сверху и снизу */
+    position: relative;
+}
+
+/* Слайдер для перемещения элементов */
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-item {
+    min-width: 300px; /* Ширина каждого слайда */
+    margin-right: 15px; /* Отступ между слайдами */
+}
+
+.slider-item .box {
+    background-color: #000; /* Чёрный фон боксов */
+    color: white;
+    border-radius: 15px; /* Закругленные углы */
+    text-align: center;
+    padding: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стили для кнопок переключения слайдов */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1; /* Поверх слайдера */
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: flex-end; /* Выровнять кнопку вправо */
+    margin-right: 20px; /* Отступ справа */
+}
+
+.move-right-btn {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.move-right-btn:hover {
+    background-color: #333;
 }
 
 /* Адаптивность для мобильных устройств */

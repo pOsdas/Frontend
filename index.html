@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your App Name</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="assets/icons/app-ico.png" alt="App Icon">
-            <h1>Your App Name</h1>
+            <img src="assets/images/artificial-intelligence.png" alt="App Icon">
+            <h1>MindHelp</h1>
+            <div class="separator"></div>
         </div>
         <nav>
             <a href="#" class="btn signup">Sign Up</a>
@@ -18,10 +20,61 @@
         </nav>
     </header>
 
-    <hr class="divider">
+    <div class="separator"></div>
 
-    <section class="intro">
-        <h2>Explore infinite capabilities of writing</h2>
-    </section>
+    <h2>Explore infinite <span class="highlight">capabilities</span> of ai</h2>
+
+    <!-- Контейнер для боксов -->
+    <div class="box-container">
+        <div class="box">
+            <div class="icon-wrapper">
+                <img src="assets/images/edit-text.png" alt="Icon 1">
+            </div>
+            <p>Allow to provide any information you want</p>
+        </div>
+        <div class="box">
+            <div class="icon-wrapper">
+                <img src="assets/images/human-brain.png" alt="Icon 2">
+            </div>
+            <p>Remembers the conversation</p>
+        </div>
+        <div class="box">
+            <div class="icon-wrapper">
+                <img src="assets/images/danger.png" alt="Icon 3">
+            </div>
+            <p>Trained to fix typo and same problems</p>
+        </div>
+    </div>
+
+    <!-- Слайдер -->
+    <h2 class="slider-heading-left">Prompt Library</h2>
+    <div class="slider">
+        <div class="slider-track">
+            <div class="slider-item">
+                <div class="box">
+                    <p>Prompt 1</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="box">
+                    <p>Prompt 2</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <div class="box">
+                    <p>Prompt 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопки для управления слайдером -->
+    <div class="slider-controls">
+        <button class="slider-btn move-right-btn">→</button>
+        <!-- →← -->
+    </div>
+
+    <!-- Закрывающий тег body -->
+<script src="assets/js/slider.js"></script>
 </body>
 </html>
