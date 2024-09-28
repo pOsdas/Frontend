@@ -7,6 +7,7 @@ const sliderWidth = sliderItems[0].offsetWidth; // Ширина одного э�
 
 // Обработчик нажатия кнопки "вправо" и "влево"
 moveSliderBtn.addEventListener('click', () => {
+    const maxPosition = sliderItems.length - 3;
     if (moveSliderBtn.textContent === '→') {
         if (currentPosition < sliderItems.length - 1) {
             currentPosition++;

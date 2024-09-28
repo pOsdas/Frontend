@@ -146,30 +146,41 @@ nav {
 
 /* Заголовок для слайдера */
 .slider-heading-left {
-    justify-content: space-between;
+    width: 97%;
     text-align: left;
     font-weight: 400;
     font-family: 'Montserrat', sans-serif;
     margin-left: 20px;
+    padding-top: 30px;
+    margin-bottom: 10px;
 }
 
 /* Слайдер занимает всю ширину страницы */
 .slider {
-    width: 100%; /* Ширина слайдера на 100% экрана */
+    width: 97%;
     overflow: hidden;
-    margin: 30px 0; /* Отступ сверху и снизу */
+    margin: 20px 0;
     position: relative;
 }
 
 /* Слайдер для перемещения элементов */
 .slider-track {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
     transition: transform 0.5s ease;
+    /*justify-content: space-between;*/
 }
 
 .slider-item {
-    min-width: 300px; /* Ширина каждого слайда */
-    margin-right: 15px; /* Отступ между слайдами */
+    width: calc(50% - 10px);
+    min-width: 50px;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.slider-item:nth-child(odd) {
+    transform: translateX(20px);
 }
 
 .slider-item .box {
@@ -178,33 +189,40 @@ nav {
     border-radius: 15px; /* Закругленные углы */
     text-align: center;
     padding: 20px;
-    height: 100px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /* Стили для кнопок переключения слайдов */
+
 .slider-btn {
-    position: absolute;
-    top: 50%;
+    position: relative;
     transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(185, 184, 185, 0.8);
     border: none;
-    padding: 10px;
+    margin-left: 30px;
     cursor: pointer;
-    z-index: 1; /* Поверх слайдера */
+    z-index: 1;
 }
 
+
 .slider-controls {
+    position: relative;
+    width: 100%;
+    text-align: right;
     display: flex;
-    justify-content: flex-end; /* Выровнять кнопку вправо */
+    justify-content: space-between;
     margin-right: 20px; /* Отступ справа */
 }
 
 .move-right-btn {
+    position: absolute;
+    top: -215px;
+    right: 10px;
     padding: 10px 20px;
-    background-color: #000;
+    background-color: #949494;
     color: #fff;
     border: none;
     border-radius: 5px;
